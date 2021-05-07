@@ -1,13 +1,89 @@
+* {
+  margin: 0;
+}
+
 body {
   margin: 0;
+  padding: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: #43464B;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.header {
+  padding: 35px;
+  background: #1abc9c;
+  font-size:20px;
+}
+
+.headerMain {
+  text-decoration: none;
+  background: #1abc9c;
+  color: white;
+  text-align: left;
+}
+
+.headerLink {
+  text-decoration: none;
+  background: #1abc9c;
+  color: white;
+  text-align: right;
+}
+
+.linkStyle {
+  text-decoration: none;
+  background: #1abc9c;
+  color: white;
+  text-align: right;
+  padding: 15px;
+}
+
+.product-avatar {
+  justify-self: center;
+  height: 12rem;
+  padding: 1rem;
+  width: auto;
+}
+
+.card {
+  text-align: center;
+  color: white;
+  background: #43464B;
+  border: rgb(0, 0, 0) solid 2px;
+  width: 15rem;
+  height: 25rem;
+  display: inline-grid;
+  margin: 1rem 2rem;
+  border-radius: 5px;
+}
+
+.cardTitle {
+  text-align: center;
+  color: white;
+  background-color: #1abc9c;
+  border-bottom: rgb(0, 0, 0) solid 2px;
+  border-radius: 5px;
+  font-size:18px;
+}
+
+button {
+  position: relative;
+  background-color: #1abc9c;
+  border: none;
+  border-radius: 5px;
+  height: 3rem;
+  width: max-content;
+  color: whitesmoke;
+  font-size: 18px;
+  justify-self: center;
+}
+
+
