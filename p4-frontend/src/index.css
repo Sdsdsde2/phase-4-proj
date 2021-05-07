@@ -72,6 +72,7 @@ code {
   border-bottom: rgb(0, 0, 0) solid 2px;
   border-radius: 5px;
   font-size:18px;
+  padding-bottom: 1%;
 }
 
 button {
@@ -86,4 +87,70 @@ button {
   justify-self: center;
 }
 
+.register-card {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  background: #43464B;
+  border: rgb(0, 0, 0) solid 2px;
+  width: 15rem;
+  height: 15rem;
+  display: inline-grid;
+  margin: 1rem 2rem;
+  border-radius: 5px;
+}
 
+.register-form {
+  position: relative;
+  top: -60%;
+  padding-top: 90%;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+#login-input {
+  position: relative;
+  top: 20%;
+  padding: 3%;
+  margin-bottom: 10%;
+}
+
+#submit {
+  position: relative;
+  top: 15%;
+  background-color: #1abc9c;
+  border: none;
+  border-radius: 5px;
+  height: 3rem;
+  width: max-content;
+  color: whitesmoke;
+  font-size: 18px;
+  justify-self: center;
+}
+
+.login-card {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  background: #43464B;
+  border: rgb(0, 0, 0) solid 2px;
+  width: 15rem;
+  height: 15rem;
+  display: inline-grid;
+  margin: 1rem 2rem;
+  border-radius: 5px;
+}
+
+.login-form {
+  position: relative;
+  top: -60%;
+  padding-top: 90%;
+  padding-left: 10%;
+  padding-right: 10%;
+}

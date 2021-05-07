@@ -1,5 +1,7 @@
 import React from 'react';
-import Main from './main'
+import Main from './main';
+import Register from './register';
+import Login from './login';
 
 import {
     BrowserRouter as Router,
@@ -43,14 +45,6 @@ export default function Header(props) {
 
 function Home() {
     return <Main />;
-}
-  
-function Register() {
-    return <h2>Register</h2>;
-}
-  
-function Login() {
-    return <h2>Login</h2>;
 }
 
 function Cart() {
