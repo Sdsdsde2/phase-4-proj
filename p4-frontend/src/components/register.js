@@ -8,13 +8,13 @@ export default function Register() {
             </div>
             <form className="register-form">
                 <label>
-                    <input type="text" name="name" placeholder="Name" id="login-input"/>
+                    <input type="text" name="regname" placeholder="Name" id="login-input"/>
                 </label>
                 <label>
-                    <input type="text" name="name" placeholder="Username" id="login-input"/>
+                    <input type="text" name="regusername" placeholder="Username" id="login-input"/>
                 </label>
                 <label>
-                    <input type="password" name="password" placeholder="Password" id="login-input"/>
+                    <input type="password" name="regpassword" placeholder="Password" id="login-input"/>
                 </label>
                 <input type="submit" value="Create Account" id="submit" />
             </form>

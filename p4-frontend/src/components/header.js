@@ -2,6 +2,7 @@ import React from 'react';
 import Main from './main';
 import Register from './register';
 import Login from './login';
+import Cart from './cart';
 
 import {
     BrowserRouter as Router,
@@ -45,8 +46,4 @@ export default function Header(props) {
 
 function Home() {
     return <Main />;
-}
-
-function Cart() {
-    return <h2>Cart</h2>;
 }

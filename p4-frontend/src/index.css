@@ -154,3 +154,31 @@ button {
   padding-left: 10%;
   padding-right: 10%;
 }
+
+.cart-card {
+  text-align: center;
+  position: fixed;
+  top: 50%;
+  left: 48%;
+  transform: translate(-50%, -50%);
+  color: white;
+  background: #43464B;
+  border: rgb(0, 0, 0) solid 2px;
+  width: 65rem;
+  height: 35rem;
+  display: inline-grid;
+  margin: 1rem 2rem;
+  border-radius: 5px;
+}
+
+.cart-card-title {
+  text-align: center;
+  position: relative;
+  color: white;
+  background-color: #1abc9c;
+  border-bottom: rgb(0, 0, 0) solid 2px;
+  border-radius: 5px;
+  font-size:18px;
+  padding-bottom: 1%;
+  height: 2rem;
+}
