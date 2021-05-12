@@ -1,5 +1,6 @@
 import React from 'react';
-import Cart from './cart';
+import Card from './card'
+// import Cart from './cart';
 
 const newItem = {
     name: 'Ice Cream Cone',
@@ -15,14 +16,15 @@ function createCartItem() {
 
 export default function Main(props) {
     return (
-        <div className="card">
-            <div className="cardTitle">
-                <h2>Ice Cream Cone</h2>
+        <div>
+            {props.products.map((product) => <Card key={product.id} product={product}/>)}
+            {/* <div className="cardTitle">
+                <h2>{props.body}</h2>
             </div>
             <img src={'https://upload.wikimedia.org/wikipedia/commons/d/da/Strawberry_ice_cream_cone_%285076899310%29.jpg'} alt="" className="product-avatar" />
-            <p>$ 3.99</p>
-            <p>3 Reviews</p>
-            <button className="review-btn" onClick={createCartItem}>Add to cart</button>
+            <p>{props.id}</p>
+            <p>{props.postId}</p>
+            <button className="review-btn" onClick={createCartItem}>Add to cart</button> */}
         </div>
     )
 }

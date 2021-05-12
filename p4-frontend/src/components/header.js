@@ -37,13 +37,10 @@ export default function Header(props) {
                     <Cart />
                 </Route>
                 <Route path="/">
-                    <Home />
+                    
+                    <Main products={props.products}/>
                 </Route>
             </Switch>
         </Router>
     )
-}
-
-function Home() {
-    return <Main />;
 }
