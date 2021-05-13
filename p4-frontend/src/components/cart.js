@@ -1,21 +1,40 @@
 import React from 'react';
+import Card from './card'
 
 class Cart extends React.Component {
+
+    state = {
+        products: []
+    }
+
+    componentDidMount() {
+        fetch('http://localhost:3000/purchases', {
+            method: 'GET',
+            headers: {
+                'content-type': 'application/json',
+                'accept': 'application/json'
+            },
+        })
+        .then(resp => resp.json())
+        .then(products => {
+            this.setState({
+                products: products
+            })
+        })
+    }
+
     render() {
-    return (
-        <div className="cart-card">
-            <div className="cart-card-title">
-                <h2>Your Shopping Cart</h2>
-            </div>
-            <div className="card">
+
+        return (
+            <div className="cart-card">
                 <div className="cart-card-title">
-                    <h2>Ice Cream Cone</h2>
+                    <h2>Your Shopping Cart</h2>
                 </div>
-                <img src={'https://upload.wikimedia.org/wikipedia/commons/d/da/Strawberry_ice_cream_cone_%285076899310%29.jpg'} alt="" className="product-avatar" />
-                <button className="remove-btn">Remove Item</button>
+                {this.state.products.map(product => {
+                    return <Card key={product.id} product={product} />
+                })}
             </div>
-        </div>
-    );
+        );
     }
 }
 

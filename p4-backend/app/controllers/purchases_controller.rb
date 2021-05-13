@@ -1,8 +1,9 @@
 class PurchasesController < ApplicationController
 
     def index
-        purchases = Purchase.all
-        render json: purchases
+        user = User.first
+        purchase = user.shopping_carts.first.products
+        render json: purchase
     end
 
     def show
@@ -11,9 +12,10 @@ class PurchasesController < ApplicationController
     end
 
     def create
-        purchase.create(
-            purchase_id: params[:purchase_id],
-            shopping_cart_id: params[:shopping_cart_id]
+        # byebug
+        purchase = Purchase.create(
+            product_id: params['_json'],
+            shopping_cart_id: ShoppingCart.first.id
         )
         render json: purchase
     end

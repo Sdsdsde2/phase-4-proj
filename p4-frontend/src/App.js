@@ -9,15 +9,30 @@ class App extends React.Component{
   }
 
   componentDidMount() {
-    fetch('http://localhost:3000/comments')
+    fetch('http://localhost:3000/products')
     .then(resp => resp.json())
-    .then(data => this.setState({products: data}))
+    .then(data => {
+      this.setState({
+        products: data
+      })
+    })
+  }
+
+  addToCart = (cartItem) => {
+    fetch('http://localhost:3000/purchases', {
+      method: 'POST',
+      headers: {
+        'content-type': 'application/json',
+        'accept': 'application/json'
+      },
+      body: JSON.stringify(cartItem)
+    })
   }
   
   render() {
   return (
     <div className="App">
-      <Header products={this.state.products}/>
+      <Header products={this.state.products} addToCart={this.addToCart} />
       <div>
         
       </div>

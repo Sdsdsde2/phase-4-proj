@@ -38,7 +38,7 @@ export default function Header(props) {
                 </Route>
                 <Route path="/">
                     
-                    <Main products={props.products}/>
+                    <Main products={props.products} addToCart={props.addToCart} />
                 </Route>
             </Switch>
         </Router>

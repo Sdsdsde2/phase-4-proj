@@ -10,4 +10,10 @@ class ShoppingCartsController < ApplicationController
         render json: shopping_cart
     end
     
+    def create
+        shopping_cart = ShoppingCart.create(
+            user_id: User.first.id
+        )
+    end
+
 end

@@ -8,14 +8,15 @@
 
 User.destroy_all
 Product.destroy_all
+ShoppingCart.destroy_all
 Purchase.destroy_all
 Review.destroy_all
-ShoppingCart.destroy_all
+
 
 # users
 
-User.create(name: "Luis Lozano", password: "1234")
-User.create(name: "Shane Rachal", password: "4321")
+User.create(name: "Luis Lozano", username: "Luis123", password: "1234")
+User.create(name: "Shane Rachal", username: "Shane123", password: "4321")
 
 Product.create(name: 'Baby Girl Gray Onesie', review: Faker::Quote.yoda, price: Faker::Commerce.price(range: 0..50.0, as_string: false), quantity: rand(1..15), rating: rand(1..5), image: 'https://target.scene7.com/is/image/Target/GUEST_b11cced2-a7d1-4cee-a490-b63977802d5a?wid=325&hei=325&qlt=80&fmt=webp')
 Product.create(name: 'Baby Girl Pink Onesie', review: Faker::Quote.yoda, price: Faker::Commerce.price(range: 0..50.0, as_string: false), quantity: rand(1..15), rating: rand(1..5), image: 'https://target.scene7.com/is/image/Target/GUEST_20299b2a-ce0b-4a38-845d-a1838e268a54?qlt=85&fmt=&hei=325&wid=325')
@@ -30,16 +31,17 @@ Product.create(name: 'Baby Girl Pink Bunny Dress', review: Faker::Quote.yoda, pr
 Product.create(name: 'Baby Girl 2pk Cotton Dresses', review: Faker::Quote.yoda, price: Faker::Commerce.price(range: 0..50.0, as_string: false), quantity: rand(1..15), rating: rand(1..5), image: 'https://target.scene7.com/is/image/Target/GUEST_9a2f2b16-15f5-4e20-a853-ddeb39a37c29?wid=325&hei=325&qlt=80&fmt=webp')
 Product.create(name: 'Baby Girl Star Dress', review: Faker::Quote.yoda, price: Faker::Commerce.price(range: 0..50.0, as_string: false), quantity: rand(1..15), rating: rand(1..5), image: 'https://target.scene7.com/is/image/Target/GUEST_b621c125-d745-4521-879b-ffaeaa1c8537?wid=325&hei=325&qlt=80&fmt=webp')
 
+# 20.times do
+#     ShoppingCart.create({
+#         user_id: rand(1..2)
+#     })
+# end
+ShoppingCart.create(user_id: User.first.id)
+
 20.times do
     Review.create({
         user_id: rand(1..2),
         product_id: rand(1..10)
-    })
-end
-
-20.times do
-    ShoppingCart.create({
-        user_id: rand(1..2)
     })
 end
 
