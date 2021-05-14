@@ -1,10 +1,10 @@
 import React from 'react';
-import Card from './card'
+import CartCard from './cartcard'
 
 class Cart extends React.Component {
 
     state = {
-        products: []
+        purchases: []
     }
 
     componentDidMount() {
@@ -16,11 +16,25 @@ class Cart extends React.Component {
             },
         })
         .then(resp => resp.json())
-        .then(products => {
+        .then(purchases => {
             this.setState({
-                products: products
+                purchases: purchases
             })
         })
+    }
+
+    clearCart = () => {
+        this.props.cartItems.map(purchase => {
+            this.props.removeFromCart(purchase)
+        })
+        alert("Cart has been cleared successfully!")
+    }
+
+    purchaseItems = () => {
+        this.props.cartItems.map(purchase => {
+            this.props.removeFromCart(purchase)
+        })
+        alert("Thank you for your purchase")
     }
 
     render() {
@@ -30,9 +44,15 @@ class Cart extends React.Component {
                 <div className="cart-card-title">
                     <h2>Your Shopping Cart</h2>
                 </div>
-                {this.state.products.map(product => {
-                    return <Card key={product.id} product={product} />
-                })}
+                <div>
+                    {this.props.cartItems.map(purchase => {
+                        return <CartCard cartItem={purchase} removeFromCart={this.props.removeFromCart} />
+                    })}
+                </div>
+                <div>
+                    <button onClick={this.clearCart} className="purchase-btn">Empty cart items</button>
+                    <button onClick={this.purchaseItems} className="purchase-btn">Purchase Items</button>
+                </div>
             </div>
         );
     }

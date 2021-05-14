@@ -34,10 +34,9 @@ export default function Header(props) {
                     <Login />
                 </Route>
                 <Route path="/cart">
-                    <Cart />
+                    <Cart cartItems={props.cartItems} removeFromCart={props.removeFromCart}/>
                 </Route>
                 <Route path="/">
-                    
                     <Main products={props.products} addToCart={props.addToCart} />
                 </Route>
             </Switch>

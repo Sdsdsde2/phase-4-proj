@@ -169,6 +169,7 @@ button {
   display: inline-grid;
   margin: 1rem 2rem;
   border-radius: 5px;
+  overflow: auto;
 }
 
 .cart-card-title {

@@ -1,12 +1,17 @@
 import React from 'react';
 
 export default function Register() {
+
+    function submitHandler(e) {
+        e.preventDefault();
+    }
+
     return (
         <div className="register-card">
             <div className="cardTitle">
                 <h2>Register</h2>
             </div>
-            <form className="register-form">
+            <form className="register-form" onSubmit={submitHandler}>
                 <label>
                     <input type="text" name="regname" placeholder="Name" id="login-input"/>
                 </label>
