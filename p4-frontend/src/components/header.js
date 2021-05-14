@@ -16,7 +16,7 @@ export default function Header(props) {
         <Router>
             <div className="header">
                 <h1>
-                    <Link to="/" className="headerMain">Our Shopping App</Link>
+                    <Link to="/" className="headerMain">React Clothing Store</Link>
                 </h1>
                 <h3>
                     <div className="headerLink">
@@ -28,7 +28,7 @@ export default function Header(props) {
             </div>
             <Switch>
                 <Route path="/register">
-                    <Register />
+                    <Register createAccount={props.createAccount} />
                 </Route>
                 <Route path="/login">
                     <Login />

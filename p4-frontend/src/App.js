@@ -46,11 +46,31 @@ class App extends React.Component{
       cartItems: this.state.cartItems.filter((cartItem)=>{ return cartItem !== cartItem})
     })
   }
+
+  createAccount = (accountArgs) => {
+    console.log("Added" + accountArgs)
+
+    let reqPackage = {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accepts': 'application/json'
+      },
+      body: JSON.stringify(accountArgs)
+    }
+
+    fetch(`http://localhost:3000/users`, reqPackage)
+    // .then(resp => resp.json())
+    // .then(data => this.setState({
+    //   cartItems: [...this.state.cartItems, data]
+    //   })
+    // )
+  }
   
   render() {
   return (
     <div className="App">
-      <Header products={this.state.products} cartItems={this.state.cartItems} addToCart={this.addToCart} removeFromCart={this.removeFromCart} />
+      <Header products={this.state.products} cartItems={this.state.cartItems} addToCart={this.addToCart} removeFromCart={this.removeFromCart} createAccount={this.createAccount} />
       <div>
         
       </div>

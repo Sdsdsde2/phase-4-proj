@@ -6,11 +6,12 @@ class CartCard extends Component {
     return (
       <div className="card">
         {console.log(this.props.cartItem)}
+        {console.log(this.props.productID)}
         <div className="cardTitle">
-            <h2>{this.props.cartItem.name}</h2>
+            <h2>Your Cart Item</h2>
         </div>
-        <img src={this.props.cartItem.image} alt="" className="product-avatar" />
-        <p>{this.props.id}</p>
+        <img src="https://recognizeyourworld.com/wp-content/uploads/2016/12/T-Shirt-Icon.jpg" alt="" className="product-avatar" />
+        <p>Price: $9</p>
         <p>{this.props.postId}</p>
         <button onClick={() => this.props.removeFromCart(this.props.cartItem.id)} >Remove from cart</button>
       </div>

@@ -46,7 +46,8 @@ class Cart extends React.Component {
                 </div>
                 <div>
                     {this.props.cartItems.map(purchase => {
-                        return <CartCard cartItem={purchase} removeFromCart={this.props.removeFromCart} />
+                        let prod = this.state.purchases.find((product) => product.id === purchase.product_id)
+                        return <CartCard cartItem={purchase} productID={purchase.product_id} removeFromCart={this.props.removeFromCart} product={prod}/>
                     })}
                 </div>
                 <div>

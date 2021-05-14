@@ -1,17 +1,26 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-export default function Register() {
+class Register extends Component {
 
-    function submitHandler(e) {
+    submitHandler = (e) => {
         e.preventDefault();
+
+        let newAccount = {
+            name: e.target[0].value,
+            username: e.target[1].value,
+            password: e.target[2].value
+        }
+
+        this.props.createAccount(newAccount)
     }
 
+    render() {
     return (
         <div className="register-card">
             <div className="cardTitle">
                 <h2>Register</h2>
             </div>
-            <form className="register-form" onSubmit={submitHandler}>
+            <form className="register-form" onSubmit={this.submitHandler}>
                 <label>
                     <input type="text" name="regname" placeholder="Name" id="login-input"/>
                 </label>
@@ -25,4 +34,7 @@ export default function Register() {
             </form>
         </div>
     )
+    }
 }
+
+export default Register;

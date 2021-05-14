@@ -11,6 +11,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: #43464B;
+  overflow-x: hidden;
 }
 
 code {
@@ -51,6 +52,11 @@ code {
   height: 12rem;
   padding: 1rem;
   width: auto;
+}
+
+.main-div {
+  position: relative;
+  left: 5%;
 }
 
 .card {
