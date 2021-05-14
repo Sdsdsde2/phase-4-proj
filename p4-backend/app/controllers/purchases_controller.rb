@@ -20,4 +20,9 @@ class PurchasesController < ApplicationController
         render json: purchase
     end
     
+    def destroy
+        purchase = Purchase.find_by(id: params[:id])
+        purchase.destroy
+    end
+
 end

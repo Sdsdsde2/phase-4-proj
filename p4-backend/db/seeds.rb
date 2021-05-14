@@ -45,9 +45,9 @@ ShoppingCart.create(user_id: User.first.id)
     })
 end
 
-20.times do 
-    Purchase.create({
-        product_id: rand(1..10),
-        shopping_cart_id: rand(1..20)
-    })
-end
+# 20.times do 
+#     Purchase.create({
+#         product_id: rand(1..10),
+#         shopping_cart_id: rand(1..20)
+#     })
+# end
