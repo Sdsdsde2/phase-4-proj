@@ -1,8 +1,8 @@
 import React from 'react';
-import Main from './main';
-import Register from './register';
-import Login from './login';
-import Cart from './cart';
+import Main from './Main';
+import Register from './Register';
+import Login from './Login';
+import Cart from './Cart';
 
 import {
     BrowserRouter as Router,
